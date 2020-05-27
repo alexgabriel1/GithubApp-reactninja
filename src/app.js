@@ -1,41 +1,53 @@
 'use strict'
 
-import React, { Component } from 'react'
+import React from 'react'
 
-import Titulo from './title'
-import Title from './title'
-import Bottao from './button'
+const App = () => {
+  return (
+    <div className="app" >
+      <div className="search">
+        <input type="search" placeholder='Digite o nome do usuário' name="" id="" />
+      </div>
 
 
-class App extends Component {
-  constructor() {  // construtor primeiro método inicializado com a classe
-    super(); // metodo construtor do state
-    this.state = {
-      texto: '',
-      check: false,
-    }
-  }
 
-  handleCheck(e) {
-    this.setState({
-      check: !this.state.check
-    })
-    console.log(this.state.check)
-  }
+      <div className="user-info">
+        <img src='https://avatars2.githubusercontent.com/u/48251728?v=4' />
+        <a href="https://github.com/AlexGabriel1/">
+          <h1>Alex Gabriel</h1>
+        </a>
 
-  render() {
-    return (
-      <div>
-        <form>
-          <input type='text' value={this.state.texto} onChange={(e) => this.setState({ texto: e.target.value })} />
-          <input type='checkbox' checked={this.state.check} onChange={(e) => this.handleCheck(e)} />
-        </form>
-        <h1>{this.state.texto}</h1>
-        <br />
+        <ul className="repos-info">
+          <li>Repositorios: 9</li>
+          <li>Seguidores: 3</li>
+          <li>Seguindo: 14</li>
+        </ul>
 
-      </div >
-    )
-  }
+        <div className="actions">
+          <button>Ver Repositorios</button>
+          <button>Ver Favoritos</button>
+        </div>
+
+
+        <div className="repos">
+          <h2>Repositórios: </h2>
+          <ul className="repos">
+            <li><a href="#">Nome do Repositório</a></li>
+          </ul>
+        </div>
+
+        <div className="starred">
+          <h2>Favoritos:</h2>
+          <ul>
+            <li><a href="#">Nome do Repositório</a></li>
+          </ul>
+
+        </div>
+
+
+      </div>
+    </div>
+  )
 }
 
 
@@ -45,32 +57,3 @@ export default App
 
 
 
-
-// Lifecycle Montagem / Desmontagem / Atualização
-  // componentWillMount() { // Executado antes do componente ser renderizado
-  //   this.tmp = setInterval(() => {
-  //     this.setState({ timer: this.state.timer + 1 });
-  //   }, 1000)
-  // }
-  // componentDidMount() { // Executado depois do componente ser renderizado
-  //   console.log("foi montado")
-  // }
-  // componentWillUnmount() {  // Executado quando o componente é retirado
-  //   console.log('desmontado')
-  // }
-  // componentWillReceiveProps(nextProps) { // Executado quando o componente recebe novos valores nas props
-  //   console.log('Will Receive Props')
-  //   console.log(nextProps)
-  // }
-  // shouldComponentUpdate(nextProps, nextState) { // Executado para verficiar as alterações no componente
-  //   console.log('shouldComponentUpdate')
-  //   console.log(nextProps, ' ', nextState)
-  //   return true
-  // }
-  // componentWillUpdate(nextProps, nextState) { // É executado antes do componente ser renderizado novamente
-  //   console.log('WillUpdate')
-  //   console.log(nextProps, ' ', nextState)
-  // }
-  // componentDidUpdate(prevProps, nextState) { // Executado após a nova renderização do componente
-  //   console.log('Did Update ', nextState)
-  // }

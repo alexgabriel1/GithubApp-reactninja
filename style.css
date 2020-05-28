@@ -1,0 +1,49 @@
+img {
+  width: 200px;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: rgba(0, 0, 255, 0.26);
+  font-size: 22px;
+}
+input[type="search"] {
+  width: 600px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 32px;
+}
+.Profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.actions button {
+  font-size: 20px;
+  line-height: 24px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 2px;
+  border-radius: 4px;
+  padding: 15px;
+  min-width: 300px;
+  margin: 10px;
+}
+button:hover {
+  transform: scale(1.1);
+}
+ul {
+  list-style: none;
+}

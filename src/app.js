@@ -1,59 +1,34 @@
-'use strict'
+"use strict";
 
-import React from 'react'
+import React from "react";
+
+import Search from "./Components/search";
+import ReposInfo from "./Components/reposinfo";
+import UserInfo from "./Components/userinfo";
+import Actions from "./Components/actions";
+import Repos from "./Components/repos";
 
 const App = () => {
   return (
-    <div className="app" >
-      <div className="search">
-        <input type="search" placeholder='Digite o nome do usuário' name="" id="" />
+    <div className="app">
+      <Search />
+      <div className="Profile">
+        <UserInfo />
+        <ReposInfo />
       </div>
-
-
-
-      <div className="user-info">
-        <img src='https://avatars2.githubusercontent.com/u/48251728?v=4' />
-        <a href="https://github.com/AlexGabriel1/">
-          <h1>Alex Gabriel</h1>
-        </a>
-
-        <ul className="repos-info">
-          <li>Repositorios: 9</li>
-          <li>Seguidores: 3</li>
-          <li>Seguindo: 14</li>
-        </ul>
-
-        <div className="actions">
-          <button>Ver Repositorios</button>
-          <button>Ver Favoritos</button>
-        </div>
-
-
-        <div className="repos">
-          <h2>Repositórios: </h2>
-          <ul className="repos">
-            <li><a href="#">Nome do Repositório</a></li>
-          </ul>
-        </div>
-
-        <div className="starred">
-          <h2>Favoritos:</h2>
-          <ul>
-            <li><a href="#">Nome do Repositório</a></li>
-          </ul>
-
-        </div>
-
-
-      </div>
+      <Actions />
+      <Repos
+        classNome="repos"
+        title="Repositórios Públicos"
+        repo={[{ name: "Nome do repositório", link: "#" }]}
+      />
+      <Repos
+        classNome="starred"
+        title="Favoritos"
+        repo={[{ name: "Nome do repositório", link: "#" }]}
+      />
     </div>
-  )
-}
+  );
+};
 
-
-export default App
-
-
-
-
-
+export default App;

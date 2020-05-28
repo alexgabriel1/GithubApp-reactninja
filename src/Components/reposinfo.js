@@ -1,10 +1,10 @@
 import React from "react";
 
-const ReposInfo = () => (
+const ReposInfo = (props) => (
   <ul className="repos-info">
-    <li>Repositorios: 9</li>
-    <li>Seguidores: 3</li>
-    <li>Seguindo: 14</li>
+    <li>Repositorios: {props.repositorios}</li>
+    <li>Seguidores: {props.seguidores}</li>
+    <li>Seguindo: {props.seguindo}</li>
   </ul>
 );
 

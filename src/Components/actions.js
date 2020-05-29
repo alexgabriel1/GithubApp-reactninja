@@ -1,9 +1,9 @@
 import React from "react";
 
-const Actions = () => (
+const Actions = (props) => (
   <div className="actions">
-    <button>Ver Repositorios</button>
-    <button>Ver Favoritos</button>
+    <button onClick={() => props.getRepos()}>Ver Repositorios</button>
+    <button onClick={() => props.getStarred()}>Ver Favoritos</button>
   </div>
 );
 export default Actions;

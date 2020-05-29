@@ -7,8 +7,8 @@ const Repos = (props) => (
       {props.repo.map((repositorio, index) => {
         return (
           <li key={index}>
-            <a href={repositorio.link}>
-              {index + 1} - {repositorio.name}
+            <a href={repositorio.url}>
+              {index + 1} - {repositorio.nome}
             </a>
           </li>
         );
